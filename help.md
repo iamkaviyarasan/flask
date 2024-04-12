@@ -12,4 +12,8 @@ python main.py -to run api
 
 echo $env:FLASK_APP
 
+pip freeze > .\requirements.txt -it overwrite install package
+
+
+
 
