@@ -10,9 +10,9 @@ class APITestCase(unittest.TestCase):
         
         self.client = self.app.test_client(self)
 
-        with self.app.app_context():
-            db.init_app(self.app)
-            db.create_all()
+        # with self.app.app_context():
+        #     db.init_app(self.app)
+        #     db.create_all()
 
 
     def test_hello_world(self):
@@ -20,7 +20,18 @@ class APITestCase(unittest.TestCase):
 
         json=hello_response.json    
         
-        self.assertEqual(json,{"message": 'hello world'})
+        self.assertEqual(json,{"message":"Hello World"})
+
+    def test_signup(self):
+        signup_response = self.client.post('/auth/signup', 
+            json={
+            'username':"testuser",'email':"testuser@test.com",
+            'password':"password"
+        })    
+
+        status_code = signup_response.status_code
+
+        self.assertEqual(status_code, 201)
 
     def tearDown(self):
         with self.app.app_context():
