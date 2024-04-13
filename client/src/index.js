@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 
-
+import './styles/main.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import NavBar from './components/Navbar';
@@ -22,7 +22,7 @@ const App = () => {
     
     return ( 
         <Router>
-        <div className='container'>
+        <div className=''>
             <NavBar/>
             <Routes>
                 <Route path="/create-recipe" element={<CreateRecipePage/>}>

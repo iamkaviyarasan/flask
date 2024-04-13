@@ -5,7 +5,7 @@ import React from "react";
 const   CreateRecipePage=()=>{
     return(
         <div className="create-recipe">
-            <h1>createRecipePage</h1>
+            <h1>create recipe</h1>
             
         </div>
     )
