@@ -18,7 +18,7 @@ const LoggedinHome=()=>{
 
     useEffect(
         ()=>{
-            fetch('/recipe/recipes')
+            fetch('https://flask-xh9v.onrender.com/recipe/recipes')
             .then(res=>res.json())
             .then(data=>{console.log(data)
             setRecipes(data)
@@ -29,7 +29,7 @@ const LoggedinHome=()=>{
         },[]
         )
         const getAllRecipes=()=>{
-            fetch('/recipe/recipes')
+            fetch('https://flask-xh9v.onrender.com/recipe/recipes')
             .then(res=>res.json())
             .then(data=>{
             setRecipes(data)

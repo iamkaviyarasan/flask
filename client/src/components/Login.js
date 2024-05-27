@@ -18,7 +18,7 @@ const LoginPage = () => {
             body: JSON.stringify(data)
         }
 
-        fetch('auth/login', requestOptions)
+        fetch('https://flask-xh9v.onrender.com/auth/login', requestOptions)
             .then(res => res.json())
             .then(data => {
                 console.log(data.access_token);

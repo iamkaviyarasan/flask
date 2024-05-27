@@ -23,7 +23,7 @@ const   CreateRecipePage=()=>{
         body:JSON.stringify(data)
         
     }   
-        fetch('/recipe/recipes',requestOptions)
+        fetch('https://flask-xh9v.onrender.com/recipe/recipes',requestOptions)
         .then(res =>res.json())
         .then(data =>{
             reset()

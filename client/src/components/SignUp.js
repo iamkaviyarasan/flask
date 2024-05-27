@@ -28,7 +28,7 @@ import {useForm} from 'react-hook-form';
             },
             body:JSON.stringify(body) }
         
-            fetch('auth/signup',requestOptions)
+            fetch('https://flask-xh9v.onrender.com/auth/signup',requestOptions)
             .then(res=>res.json())
             .then(data=>{
                 console.log(data)
