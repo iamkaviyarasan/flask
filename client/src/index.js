@@ -18,7 +18,12 @@ import LoginPage from './components/Login';
 import CreateRecipePage from './components/CreateRecipe';
 
 // to add default url for fetch
-fetch.defaults.baseURL = 'https://flask-xh9v.onrender.com'
+if (!fetch.defaults) {
+    fetch.defaults = {};
+}
+
+// Now you can safely set the baseURL property
+fetch.defaults.baseURL = 'https://flask-xh9v.onrender.com';
 const App = () => {
 
     
